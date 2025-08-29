@@ -1,0 +1,48 @@
+body {
+    overflow-y: ;
+}
+.Header {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    font-size: 2.5vh;
+    display: flex;
+    justify-content:space-between;
+    margin-top: 3px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+a:hover{
+    opacity: 0.5;
+}
+*{
+    box-sizing: border-box;
+}
+
+.Daniil-bild {
+    position: absolute;
+    top: 250px;
+    left: 250px;¨
+    width: 500px;
+    height: 500px;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    background-color: black;
+}
+.Box {
+    flex: 50%;
+}
+.Box2 {
+    font-size: 5vh;
+    flex: 50%;
+    background-color: white;
+}
