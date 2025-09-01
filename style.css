@@ -1,48 +1,96 @@
+/* Basinställningar */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; } /* gör att body täcker hela fönstret */
 body {
-    overflow-y: ;
-}
-.Header {
-    background-color: black;
-    color: white;
-    padding: 30px;
-    font-size: 2.5vh;
-    display: flex;
-    justify-content:space-between;
-    margin-top: 3px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #000;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    margin-right: 30px;
+/* Header */
+.header {
+  background: #000; /* svart bakgrund */
+  color: #fff;      /* vit text */
+  padding: 16px 28px; /* utrymme runt innehållet */
+  display: flex;      /* flexbox för att placera logotyp och meny */
+  justify-content: space-between; /* logotyp till vänster, meny till höger */
+  align-items: center; /* vertikalt centrerat */
+  border-bottom: 2px solid #fff; /* vit linje längst ner */
 }
 
-a:hover{
-    opacity: 0.5;
-}
-*{
-    box-sizing: border-box;
-}
-
-.Daniil-bild {
-    position: absolute;
-    top: 250px;
-    left: 250px;¨
-    width: 500px;
-    height: 500px;
+/* Logotyp */
+.header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.container {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    background-color: black;
+/* Navigationsmeny */
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;  /* mellanrum mellan länkarna */
+  font-weight: 500;
+  transition: opacity .2s ease; /* mjuk fade vid hover */
 }
-.Box {
-    flex: 50%;
+.nav a:hover { opacity: .6; }
+
+/* Hero-sektion (delad layout) */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* två lika stora kolumner */
+  min-height: calc(100vh - 70px); /* fyller nästan hela skärmen minus header */
 }
-.Box2 {
-    font-size: 5vh;
-    flex: 50%;
-    background-color: white;
+
+/* Vänstra halvan */
+.hero-left {
+  background: #000; /* svart bakgrund */
+  display: flex;
+  justify-content: center; /* centrerar bilden horisontellt */
+  align-items: center;     /* centrerar bilden vertikalt */
+}
+
+/* Profilbilden */
+.profile-img {
+  width: clamp(220px, 40vw, 420px); /* gör bilden responsiv */
+  aspect-ratio: 1 / 1;              /* håller den kvadratisk */
+  object-fit: cover;                /* beskär snyggt om bilden inte är kvadratisk */
+  border-radius: 50%;               /* gör den helt rund */
+  box-shadow: 0 8px 24px rgba(0,0,0,.35); /* skugga bakom bilden */
+}
+
+/* Högra halvan */
+.hero-right {
+  background: #f5f5f5; /* ljusgrå bakgrund */
+  display: flex;
+  flex-direction: column; /* stapla rubrik + text */
+  justify-content: center; /* vertikalt centrerat */
+  align-items: center;     /* horisontellt centrerat */
+  text-align: center;      /* centrerad text */
+  padding: 40px;
+}
+
+/* Rubrik */
+.hero-right h1 {
+  font-size: clamp(1.8rem, 2.5vw + .5rem, 3rem); /* responsiv storlek */
+  margin-bottom: 16px;
+}
+
+/* Underrubrik / text */
+.hero-right p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsivt */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr; /* bara en kolumn (staplas på höjden) */
+  }
+  .hero-left, .hero-right {
+    padding: 24px;
+  }
+  .profile-img {
+    width: 250px;         /* lite mindre bild på mobil */
+    margin-bottom: 20px;  /* lite luft under bilden */
+  }
 }

@@ -1,26 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniils-design</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniils lekstuga</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="Header">
-        <div class="title">Daniils Lekstuga</div>
-        <div class="knappar">
-            <a href="">Hem</a>
-            <a href="">Om Daniil</a>
-            <a href="">Mer Daniil</a>
-            <a href="">Kontakta Daniil</a>
-        </div>
-    </div>
-  <div class="container">
-    <div class="Box">Svart</div>
-    <div class="Box2">Välkommen till Daniils lekstuga</div>
-</div>
 
-    <img src="daniil-baykov-400x400.jpg" alt="" style="border-radius: 50%;" class="Daniil-bild">
+  <!-- Header (svart rad högst upp med logotyp och meny) -->
+  <header class="header">
+    <!-- Webbplatsens titel / logga -->
+    <div class="logo">Daniils lekstuga</div>
+
+    <!-- Navigationslänkar -->
+    <nav class="nav">
+      <a href="">Hem</a>
+      <a href="">Om Daniil</a>
+      <a href="https://www.youtube.com/@VeryBadUnicorn">Mer Daniil</a>
+      <a href="">Kontakta Daniil</a>
+    </nav>
+  </header>
+
+  <!-- Hero-sektion (delad skärm) -->
+  <main class="hero">
+
+    <!-- Vänster halva: svart bakgrund med bild -->
+    <section class="hero-left">
+      <img src="daniil-baykov-400x400.jpg" alt="Porträtt av Daniil Baykov" class="profile-img">
+    </section>
+
+    <!-- Höger halva: ljus bakgrund med rubrik och text -->
+    <section class="hero-right">
+      <h1>Välkommen till Daniils lekstuga</h1>
+      <p>Visst är det kul att placera ut objekt i HTML?</p>
+    </section>
+
+  </main>
+
 </body>
 </html>
